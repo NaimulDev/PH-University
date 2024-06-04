@@ -1,4 +1,4 @@
-import { Document, Model } from "mongoose";
+import { Document, Model, Types } from "mongoose";
 
 export interface TUserName {
   firstName: string;
@@ -24,14 +24,14 @@ export interface TLocalGuardian {
 
 export interface TStudent extends Document {
   id: string;
-  user: string;
+  user: Types.ObjectId;
   name: TUserName;
   gender: "male" | "female" | "other";
-  dateOfBirth: string;
+  dateOfBirth: Date;
   email: string;
   contactNo: string;
   emergencyContactNo: string;
-  bloodGroup?: string;
+  bloodGroup?: "A+" | "A-" | "B+" | "B-" | "AB+" | "AB-" | "O+" | "O-";
   presentAddress: string;
   permanentAddress: string;
   guardian: TGuardian;
