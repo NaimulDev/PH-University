@@ -3,7 +3,7 @@ import { TAcademicSemester } from "./academicSemester.interface";
 import {
   AcademicSemesterCode,
   AcademicSemesterName,
-  months,
+  Months,
 } from "./academicSemester.constant";
 
 const academicSemesterSchema = new Schema<TAcademicSemester>(
@@ -25,12 +25,12 @@ const academicSemesterSchema = new Schema<TAcademicSemester>(
     },
     startMonth: {
       type: String,
-      enum: months,
+      enum: Months,
       required: true,
     },
     endMonth: {
       type: String,
-      enum: months,
+      enum: Months,
       required: true,
     },
   },

@@ -37,6 +37,7 @@ export interface TStudent extends Document {
   guardian: TGuardian;
   localGuardian: TLocalGuardian;
   profileImg?: string;
+  admissionSemester: Types.ObjectId;
   isDeleted?: boolean;
 }
 

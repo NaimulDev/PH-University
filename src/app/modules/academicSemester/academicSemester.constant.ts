@@ -5,7 +5,7 @@ import {
   TMonthS,
 } from "./academicSemester.interface";
 
-export const months: TMonthS[] = [
+export const Months: TMonthS[] = [
   "January",
   "February",
   "March",
